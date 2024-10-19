@@ -2,7 +2,7 @@
 
     let humanScore  = 0;
     let computerScore = 0;
-    
+
     //Creating function for computer choice
     function getComputerChoice(){
         
@@ -28,8 +28,14 @@
 
     //Creating function for human choice
     function getHumanChoice(){
-        humanChoice = prompt("Enter your choice: rock, paper or scissor");
+        humanChoice = prompt("Enter your choice: rock, paper or scissor").toLocaleLowerCase;
+        humanChoice
         return humanChoice;
+    }
+
+    //function to actually start game
+    function playRound(humanChoice, computerChoice){
+
     }
     
 
