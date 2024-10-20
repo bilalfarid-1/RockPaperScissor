@@ -28,17 +28,58 @@
 
     //Creating function for human choice
     function getHumanChoice(){
-        humanChoice = prompt("Enter your choice: rock, paper or scissor").toLocaleLowerCase;
-        humanChoice
+        humanChoice = prompt("Enter your choice: rock, paper or scissor");
         return humanChoice;
     }
 
     //function to actually start game
     function playRound(humanChoice, computerChoice){
+        
+            if(humanChoice === computerChoice){
+                console.log("match tied");
+            }
 
-    }
+            else if(humanChoice == 'rock'){
+                if(computerChoice == 'scissor'){
+                    console.log("human wins");
+                    humanScore++;
+                }
+                else{
+                    console.log("computer wins");
+                    computerScore++;
+                }
+            }
+
+            else if(humanChoice == 'scissor'){
+                if(computerChoice == 'paper'){
+                    console.log("human wins");
+                    humanScore++;
+                }
+                else{
+                    console.log("computer wins");
+                    computerScore++;
+                }
+            }
+
+            else if(humanChoice == 'paper'){
+                if(computerChoice == 'rock'){
+                    console.log("human wins");
+                    humanScore++;
+                }
+                else{
+                    console.log("computer wins");
+                    computerScore++;
+                }
+            }
+            
+            else{
+                console.log("error occurs");
+            }
+        }
     
-
+    humanSelection = getHumanChoice();
+    computerSelection = getComputerChoice();
+    playRound(humanSelection,computerSelection);
     
 
 
